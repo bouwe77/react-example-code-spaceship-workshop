@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
+import Number from "./Number";
+import Odd from "./Odd";
+import Even from "./Even";
+import Prime from "./Prime";
 
 export default function App() {
+  const [number, setNumber] = useState(13);
+
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      <Number number={number} setNumber={setNumber} />
+      <Prime number={number} />
+      {number % 2 === 0 ? <Even /> : <Odd />}
     </div>
   );
 }
