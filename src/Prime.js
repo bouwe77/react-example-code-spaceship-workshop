@@ -6,5 +6,11 @@ export default function Prime({ number }) {
     return num > 1;
   };
 
-  return <div>{isPrime(number) ? "WEL priemgetal" : "NIET priemgetal"}</div>;
+  const bla = isPrime(number);
+
+  return (
+    <div id="prime" className={bla ? "prime-true" : "prime-false"}>
+      PRIME
+    </div>
+  );
 }

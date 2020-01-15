@@ -11,8 +11,10 @@ export default function App() {
   return (
     <div>
       <Number number={number} setNumber={setNumber} />
-      <Prime number={number} />
-      {number % 2 === 0 ? <Even /> : <Odd />}
+      <div className="flex">
+        <Prime number={number} />
+        {number % 2 === 0 ? <Even /> : <Odd />}
+      </div>
     </div>
   );
 }

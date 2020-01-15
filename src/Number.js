@@ -11,10 +11,10 @@ export default function Number({ number, setNumber }) {
 
   return (
     <>
-      <div>
-        <button onClick={increment}>+</button>
-        <h1>{number}</h1>
+      <div className="flex">
         <button onClick={decrement}>-</button>
+        <div>{number}</div>
+        <button onClick={increment}>+</button>
       </div>
     </>
   );
